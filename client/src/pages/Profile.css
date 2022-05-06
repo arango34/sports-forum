@@ -25,10 +25,6 @@
   margin-right: 7rem;
 }
 
-.g {
-  color: rgb(109, 108, 108);
-}
-
 .date-span {
   margin-right: 4.5rem;
 }
@@ -39,6 +35,11 @@
 
 .posts-row {
   font-size: 0.9rem;
+}
+
+.g {
+  color: rgb(109, 108, 108);
+  font-size: 1rem;
 }
 
 .hidden {
@@ -77,7 +78,7 @@
   flex-basis: 6rem;
   height: 3rem;
   padding-top: 0.15rem;
-  padding-left: 0.5rem;
+  padding-left: 1.5rem;
   flex-grow: 0;
 }
 
