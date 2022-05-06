@@ -9,12 +9,14 @@
 
 .btn-container {
   background-color: rgb(243, 243, 243);
-  width: 1.5rem;
-  text-align: center;
+  width: 1.75rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
   font-weight: bold;
   border-radius: 0.25rem;
-  height: 1.5rem;
-  padding-top: 0.25rem;
+  height: 1.75rem;
   border: none;
 }
 
@@ -29,13 +31,13 @@
 
 .btn-container-right {
   display: flex;
-  width: 3.5rem;
+  width: 4rem;
   justify-content: space-between;
 }
 
 .btn-container-left {
   display: flex;
-  width: 3.5rem;
+  width: 4rem;
   justify-content: space-between;
 }
 
@@ -48,5 +50,5 @@
 }
 
 .color {
-  color: grey;
+  color: rgb(94, 94, 94);
 }
