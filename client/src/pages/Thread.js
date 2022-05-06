@@ -15,8 +15,15 @@ const Thread = () => {
   const [editId, setEditId] = useState('');
   const [isEdited, setIsEdited] = useState(false);
   const [red, setRed] = useState(false);
-  const { user, posts, getPosts, postReply, title, logoutUser } =
-    useAppContext();
+  const {
+    user,
+    posts,
+    getPosts,
+    postReply,
+    title,
+    logoutUser,
+    setShowLinksFalse,
+  } = useAppContext();
   let { id, page, sport, postss } = useParams();
   const navigate = useNavigate();
   const postsContainer = useRef();
@@ -111,7 +118,7 @@ const Thread = () => {
   }
 
   return (
-    <section className='thread-section'>
+    <section className='thread-section' onClick={setShowLinksFalse}>
       <h2 className='thread-h2'>{title}</h2>
       <ThreadButtons />
       <div className='forum-btn-container thread-btn-container'>

@@ -15,6 +15,8 @@ import {
   SET_TEXT,
   SET_THREAD_COUNTS,
   SET_LOGBAR,
+  TOGGLE_LINKS,
+  SET_SHOW_LINKS_FALSE,
 } from './actions';
 
 const reducer = (state, action) => {
@@ -84,6 +86,14 @@ const reducer = (state, action) => {
 
   if (action.type === SET_LOGBAR) {
     return { ...state, logbarChange: !state.logbarChange };
+  }
+
+  if (action.type === TOGGLE_LINKS) {
+    return { ...state, showLinks: !state.showLinks };
+  }
+
+  if (action.type === SET_SHOW_LINKS_FALSE) {
+    return { ...state, showLinks: false };
   }
 };
 

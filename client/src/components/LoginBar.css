@@ -29,6 +29,8 @@
   color: blue;
   background-color: transparent;
   border: none;
+  width: 3.75rem;
+  margin: 0 auto;
 }
 
 .btn-logout:hover {

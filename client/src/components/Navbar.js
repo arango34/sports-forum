@@ -11,9 +11,9 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [showLinks, setShowLinks] = useState(false);
   const [links, setLinks] = useState([]);
-  const { threadCounts, user } = useAppContext();
+  const { threadCounts, user, showLinks, toggleLinks, setShowLinksFalse } =
+    useAppContext();
 
   const getForums = useCallback(async () => {
     try {
@@ -48,13 +48,10 @@ const Navbar = () => {
       <>
         <nav>
           <div className='nav-center'>
-            <Link to='/' onClick={() => setShowLinks(false)}>
+            <Link to='/' onClick={setShowLinksFalse}>
               <h1 className='nav-h2'>SPORTS</h1>
             </Link>
-            <GiHamburgerMenu
-              className='ham'
-              onClick={() => setShowLinks(!showLinks)}
-            />
+            <GiHamburgerMenu className='ham' onClick={() => toggleLinks()} />
           </div>
         </nav>
         <div className={showLinks ? 'links-container show' : 'links-container'}>
@@ -66,15 +63,12 @@ const Navbar = () => {
 
   return (
     <>
-      <nav>
+      <nav onClick={showLinks && setShowLinksFalse}>
         <div className='nav-center'>
-          <Link to='/' onClick={() => setShowLinks(false)}>
+          <Link to='/' onClick={setShowLinksFalse}>
             <h1 className='nav-h2'>SPORTS</h1>
           </Link>
-          <GiHamburgerMenu
-            className='ham'
-            onClick={() => setShowLinks(!showLinks)}
-          />
+          <GiHamburgerMenu className='ham' onClick={toggleLinks} />
         </div>
       </nav>
       <div className={showLinks ? 'links-container show' : 'links-container'}>
@@ -91,7 +85,7 @@ const Navbar = () => {
                 <Link
                   to={`/profile/${user._id}`}
                   className={'link nav-link '}
-                  onClick={() => setShowLinks(!showLinks)}
+                  onClick={setShowLinksFalse}
                 >
                   <div className='account-info-flex'>
                     <FaRegUserCircle className='user-circle' />
@@ -101,7 +95,6 @@ const Navbar = () => {
               </div>
             </>
           )}
-
           <div className='navLink-title-container forums'>
             <div className='underline-container-forum'>
               <p className='navLink-title'>Forums</p>
@@ -110,15 +103,7 @@ const Navbar = () => {
           </div>
           <div className='radius'>
             {links.map((item, i) => {
-              return (
-                <NavLink
-                  key={i}
-                  {...item}
-                  index={i}
-                  setShowLinks={setShowLinks}
-                  showLinks={showLinks}
-                />
-              );
+              return <NavLink key={i} {...item} index={i} />;
             })}
           </div>
         </ul>

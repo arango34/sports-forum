@@ -16,6 +16,8 @@ import {
   SET_TEXT,
   SET_THREAD_COUNTS,
   SET_LOGBAR,
+  TOGGLE_LINKS,
+  SET_SHOW_LINKS_FALSE,
 } from './actions';
 
 const token = localStorage.getItem('token');
@@ -34,6 +36,7 @@ const initialState = {
   alert: false,
   threadCounts: [],
   logbarChange: false,
+  showLinks: false,
 };
 
 const AppContext = createContext();
@@ -257,6 +260,14 @@ const AppProvider = ({ children }) => {
     dispatch({ type: SET_LOGBAR });
   };
 
+  const toggleLinks = () => {
+    dispatch({ type: TOGGLE_LINKS });
+  };
+
+  const setShowLinksFalse = () => {
+    dispatch({ type: SET_SHOW_LINKS_FALSE });
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -274,6 +285,8 @@ const AppProvider = ({ children }) => {
         getThreadCounts,
         setLogbar,
         deleteUser,
+        toggleLinks,
+        setShowLinksFalse,
         authFetch,
       }}
     >

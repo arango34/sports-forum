@@ -11,7 +11,8 @@ const Forum = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const { sport, id, page, threadss } = useParams();
-  const { user, getThreads, threads, logoutUser } = useAppContext();
+  const { user, getThreads, threads, logoutUser, setShowLinksFalse } =
+    useAppContext();
 
   useEffect(() => {
     setIsLoading(true);
@@ -36,7 +37,7 @@ const Forum = () => {
   }
 
   return (
-    <section>
+    <section onClick={setShowLinksFalse}>
       <h2 className='forum-h2'>
         {sport.charAt(0).toUpperCase() + sport.slice(1)} Forum
       </h2>

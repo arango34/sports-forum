@@ -10,7 +10,8 @@ import './Home.css';
 const Home = () => {
   const [forums, setForums] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const { user, logoutUser, getThreadCounts } = useAppContext();
+  const { user, logoutUser, getThreadCounts, setShowLinksFalse } =
+    useAppContext();
 
   const getForums = useCallback(async () => {
     setIsLoading(true);
@@ -37,7 +38,7 @@ const Home = () => {
     return <Loading />;
   }
   return (
-    <section className='forum-section'>
+    <section className='forum-section' onClick={setShowLinksFalse}>
       {forums.map((item, i) => {
         return (
           <HomeRow key={i} className={i % 2 === 0 ? 'grey' : null} {...item} />

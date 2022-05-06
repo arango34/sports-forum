@@ -1,7 +1,6 @@
 .thread-btns-container {
   display: flex;
   justify-content: space-between;
-  color: grey;
   padding: 0 0.25rem;
   max-width: 31rem;
   margin: 0 auto 2rem auto;
@@ -47,6 +46,10 @@
 
 .disabled {
   color: rgb(199, 199, 199);
+}
+
+.disabled:hover {
+  cursor: default;
 }
 
 .color {

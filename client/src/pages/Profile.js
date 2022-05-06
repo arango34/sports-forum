@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import moment from 'moment';
 
+import { useAppContext } from '../context/appContext';
 import Loading from '../components/Loading';
 import ProfileForm from '../components/ProfileForm';
 
@@ -12,6 +13,7 @@ import './Profile.css';
 const Profile = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [showAlert, setShowAlert] = useState(false);
+  const { setShowLinksFalse } = useAppContext();
   const [date, setDate] = useState();
   const [currentUser, setCurrentUser] = useState();
   const { id } = useParams();
@@ -44,7 +46,7 @@ const Profile = () => {
   }
 
   return (
-    <section className='profile-section'>
+    <section className='profile-section' onClick={setShowLinksFalse}>
       <h2 className='user-h2'>Account Info</h2>
       <div className='profile-alert'>
         <p className={showAlert ? 'red showalert' : 'hidden'}>

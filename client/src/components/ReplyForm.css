@@ -7,11 +7,12 @@
 
 .reply-underline {
   width: 96%;
-  background-color: grey;
+  background-color: rgb(94, 94, 94);
 }
 
 .reply-form-h2 {
   font-size: 1.25rem;
+  color: rgb(94, 94, 94);
 }
 
 .reply-text-container {

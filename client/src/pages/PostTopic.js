@@ -14,8 +14,15 @@ const PostTopic = () => {
   };
   const [isLoading, setIsLoading] = useState(true);
   const [values, setValues] = useState(initialState);
-  const { user, createThread, showSpin, alert, alertText, threadCounts } =
-    useAppContext();
+  const {
+    user,
+    createThread,
+    showSpin,
+    alert,
+    alertText,
+    threadCounts,
+    setShowLinksFalse,
+  } = useAppContext();
   const { sport, id } = useParams();
   const navigate = useNavigate();
 
@@ -68,7 +75,7 @@ const PostTopic = () => {
   }
 
   return (
-    <section className='post-thread-section'>
+    <section className='post-thread-section' onClick={setShowLinksFalse}>
       <h2 className='post-thread-h2'>
         Create a {sport.charAt(0).toUpperCase() + sport.slice(1)} Thread
       </h2>
@@ -76,9 +83,6 @@ const PostTopic = () => {
         <div className={!showSpin && !alert ? 'spin-hidden' : ''}>
           {showSpin ? <Spinner /> : <div className='red'>{alertText}</div>}
         </div>
-        {/* <div className={!showSpin ? 'spin-hidden' : ''}>
-          <Spinner />
-        </div> */}
       </div>
       <form className='post-thread-container' onSubmit={handleSubmit}>
         <div className='subject-container'>

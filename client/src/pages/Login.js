@@ -10,7 +10,7 @@ import { useAppContext } from '../context/appContext';
 const Login = () => {
   const [isMember, setIsMember] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
-  const { showSpin, alert, alertText } = useAppContext();
+  const { showSpin, alert, alertText, setShowLinksFalse } = useAppContext();
 
   useEffect(() => {
     setIsLoading(true);
@@ -28,7 +28,7 @@ const Login = () => {
   }
 
   return (
-    <section className='login-section'>
+    <section className='login-section' onClick={setShowLinksFalse}>
       <h3 className='h4-login'>
         {isMember ? 'Member Login' : 'Create An Account'}
       </h3>

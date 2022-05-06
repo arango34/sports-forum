@@ -6,7 +6,7 @@ import Spinner from './Spinner';
 import './LoginBar.css';
 
 const LoginBar = () => {
-  const { user, logoutUser, changeLogbar } = useAppContext();
+  const { user, logoutUser, changeLogbar, setShowLinksFalse } = useAppContext();
   const [currentUser, setCurrentUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
@@ -27,7 +27,7 @@ const LoginBar = () => {
   }, [logoutUser, user, changeLogbar]);
 
   return (
-    <div className='loginbar'>
+    <div className='loginbar' onClick={setShowLinksFalse}>
       {isLoading ? (
         <div className='login login-user login-spin'>
           <Spinner className='spinner-load' />

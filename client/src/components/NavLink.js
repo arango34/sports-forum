@@ -1,14 +1,17 @@
+import { Link } from 'react-router-dom';
 import {
   FaFootballBall,
   FaBasketballBall,
   FaBaseballBall,
   FaHockeyPuck,
 } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { useAppContext } from '../context/appContext';
 
 import './NavLink.css';
 
-const NavLink = ({ name, link, setShowLinks, showLinks, index }) => {
+const NavLink = ({ name, link, index }) => {
+  const { setShowLinksFalse } = useAppContext();
+
   return (
     <li>
       <Link
@@ -16,7 +19,7 @@ const NavLink = ({ name, link, setShowLinks, showLinks, index }) => {
         className={
           index === 3 ? 'link nav-link radius-bottom' : 'link nav-link'
         }
-        onClick={() => setShowLinks(!showLinks)}
+        onClick={setShowLinksFalse}
       >
         <div className='account-info-flex'>
           {name === 'Football' ? (
