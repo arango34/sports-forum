@@ -1,0 +1,23 @@
+.reply-form-container {
+  background-color: rgb(243, 243, 243);
+  padding: 1rem 0;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.reply-underline {
+  width: 96%;
+  background-color: rgb(177, 175, 175);
+}
+
+.reply-form-h2 {
+  font-size: 1.25rem;
+}
+
+.reply-text-container {
+  padding: 0 0.5rem;
+}
+
+.danger {
+  border-color: red;
+}

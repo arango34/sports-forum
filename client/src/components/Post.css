@@ -1,0 +1,127 @@
+.post-container {
+  border-top: solid 3px rgb(177, 175, 175);
+  color: rgb(117, 117, 117);
+}
+
+.post-date-container {
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2.5rem;
+  background-color: rgb(243, 243, 243);
+  font-size: 0.9rem;
+}
+
+.post-username-container {
+  padding: 0 0.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(218, 217, 217);
+}
+
+.post-username {
+  color: blue;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.post-text-container {
+  color: black;
+  padding: 1rem 0.5rem 0 0.5rem;
+  font-weight: 100;
+  letter-spacing: 0.05rem;
+  white-space: pre-wrap;
+}
+
+.post-text {
+  line-height: 1.75rem;
+  font-size: 0.85rem;
+}
+
+.quote-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+  height: 2rem;
+}
+
+.quote-btns-container {
+  width: 6.5rem;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+}
+
+.btn-quote-plus {
+  color: rgb(184, 183, 183);
+  border: none;
+  font-size: 0.9rem;
+  background-color: transparent;
+  margin-left: 0.5rem;
+}
+
+.btn-quote {
+  color: rgb(184, 183, 183);
+  border: none;
+  background-color: transparent;
+  font-size: 0.9rem;
+}
+
+.get-inner {
+  margin-bottom: 0rem;
+  font-size: 0.8rem;
+}
+
+.original-post-reply-container {
+  background-color: rgb(243, 243, 243);
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0rem;
+  border: 1px solid rgb(189, 188, 188);
+  border-right: 1px dotted rgb(189, 188, 188);
+  border-radius: 0.25rem;
+  border-left: 3px solid rgb(189, 188, 188);
+  word-wrap: break-word;
+}
+
+.post-reply-name-cont {
+  margin-bottom: 0;
+  font-size: 0.75rem;
+  color: rgb(100, 99, 99);
+}
+
+.no-m {
+  margin-bottom: 0.25rem;
+}
+
+.m {
+  margin-bottom: -3.5rem;
+}
+
+.name-post {
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: black;
+}
+
+.margin-b {
+  margin-bottom: -1rem;
+}
+
+.margin-r {
+  margin-right: 0.5rem;
+}
+
+.text-to-quote {
+  margin-top: -2.5rem;
+  word-wrap: break-word;
+}
+
+.margin-t {
+  margin-top: -3.25rem;
+}
+
+.margin-t-small {
+  margin-top: -0.25rem;
+}

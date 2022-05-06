@@ -1,0 +1,17 @@
+.btn-error {
+  color: white;
+  background-color: rgb(71, 71, 255);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+  margin: 0 auto;
+}
+
+.error-h1 {
+  text-align: center;
+  letter-spacing: 0.15rem;
+  margin-bottom: 2rem;
+}

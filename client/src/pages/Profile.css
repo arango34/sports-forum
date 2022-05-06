@@ -1,0 +1,98 @@
+.profile-container {
+  width: 75%;
+  max-width: 40rem;
+  padding: 3rem 0 0.5rem 0;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  color: rgb(59, 59, 59);
+}
+
+.user-h2 {
+  color: rgb(71, 71, 255);
+}
+
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 5rem auto;
+  padding-left: 1.5rem;
+  font-weight: bold;
+  max-width: 22rem;
+}
+
+.b {
+  font-weight: bold;
+  margin-right: 7rem;
+}
+
+.g {
+  color: rgb(109, 108, 108);
+}
+
+.date-span {
+  margin-right: 4.5rem;
+}
+
+.date-row {
+  font-size: 0.9rem;
+}
+
+.posts-row {
+  font-size: 0.9rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.profile-btn-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 4rem;
+  max-width: 22rem;
+  margin: 0 auto;
+}
+
+.width {
+  flex-basis: 6rem;
+  flex-grow: 0;
+}
+
+.btn-update {
+  background-color: rgb(71, 71, 255);
+  color: white;
+  border: none;
+  flex-basis: 6rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+  flex-grow: 0;
+}
+
+.btn-update:hover {
+  cursor: pointer;
+}
+
+.update-red {
+  flex-basis: 6rem;
+  height: 3rem;
+  padding-top: 0.15rem;
+  padding-left: 0.5rem;
+  flex-grow: 0;
+}
+
+.btn-hover {
+  font-size: 0.75rem;
+  background-color: transparent;
+  color: red;
+  text-align: center;
+  border: none;
+}
+
+.profile-alert {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -1.5rem;
+}

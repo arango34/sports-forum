@@ -1,0 +1,45 @@
+.square {
+  height: 1.15rem;
+  width: 1.15rem;
+  color: rgb(71, 71, 255);
+  margin-right: 1rem;
+}
+
+.forum-info-container {
+  display: flex;
+}
+
+.forum-row-article {
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.h4-forum {
+  color: blue;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 0.15rem;
+}
+.grey {
+  background-color: rgb(248, 246, 246);
+}
+
+.forum-row-article:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.forum-p {
+  font-size: 0.8rem;
+  color: rgb(117, 117, 117);
+}
+
+.arrow {
+  font-size: 0.55rem;
+  margin: 0.3rem;
+}
+
+.page {
+  font-size: 0.85rem;
+  color: blue;
+}

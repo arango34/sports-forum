@@ -1,0 +1,29 @@
+.spinner-container-load {
+  position: relative;
+  /* border: 1px solid; */
+}
+/* @keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-load {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: blue;
+  animation: spin 0.6s linear infinite;
+}

@@ -1,0 +1,26 @@
+.thread-h2 {
+  width: 85%;
+  padding-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.replies-container {
+  height: 20rem;
+  width: 2rem;
+  border: 1px solid;
+  overflow: hidden;
+  margin: 0;
+}
+
+.posts-container {
+  margin: 0 auto 4rem auto;
+}
+
+.bottom-btn {
+  margin-bottom: 2.25rem;
+  margin-top: -6rem;
+}
+
+.bottom-link {
+  margin: 0 auto;
+}

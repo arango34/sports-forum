@@ -1,0 +1,52 @@
+.post-thread-h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.post-thread-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 0.5rem;
+  border: solid 1px rgb(177, 177, 177);
+  background-color: rgb(243, 243, 243);
+  width: 95%;
+  margin-bottom: 2rem;
+}
+
+.subject-label {
+  margin-right: 0.5rem;
+  font-weight: bold;
+  color: rgb(117, 117, 117);
+}
+
+.subject-input {
+  width: 100%;
+  height: 1.5rem;
+  border: 1px solid rgb(177, 177, 177);
+}
+
+.subject-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.post-thread-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.post-thread-btn {
+  background-color: rgb(71, 71, 255);
+  color: white;
+  border: none;
+  width: 7rem;
+  height: 1.5rem;
+  border-radius: 3rem;
+  margin-right: 0.5rem;
+}
+
+.btn-clear {
+  background-color: grey;
+}
