@@ -12,9 +12,9 @@ import Btn from './Btn';
 
 const ThreadButtons = () => {
   const { btns, setShowLinksFalse } = useAppContext();
-
   const { lastPage } = btns;
   const { page, id, sport, postss, threadss } = useParams();
+
   return (
     <div onClick={setShowLinksFalse}>
       {!btns || btns.length === 0 ? (
@@ -24,10 +24,10 @@ const ThreadButtons = () => {
           <div className='btn-container-left'>
             {page === '1' ? (
               <>
-                <div className='btn-container disabled'>
+                <div className='btn-container disabled width-arrow'>
                   <FaAngleDoubleLeft />
                 </div>
-                <div className='btn-container disabled'>
+                <div className='btn-container disabled width-arrow'>
                   <FaAngleLeft />
                 </div>
               </>
@@ -41,7 +41,7 @@ const ThreadButtons = () => {
                   }
                   className='color'
                 >
-                  <div className='btn-container'>
+                  <div className='btn-container width-arrow'>
                     <FaAngleDoubleLeft />
                   </div>
                 </Link>
@@ -55,7 +55,7 @@ const ThreadButtons = () => {
                   }
                   className='color'
                 >
-                  <div className='btn-container'>
+                  <div className='btn-container width-arrow'>
                     <FaAngleLeft />
                   </div>
                 </Link>
@@ -70,10 +70,10 @@ const ThreadButtons = () => {
           <div className='btn-container-right'>
             {parseInt(page) === lastPage ? (
               <>
-                <div className='btn-container disabled'>
+                <div className='btn-container disabled width-arrow'>
                   <FaAngleRight />
                 </div>
-                <div className='btn-container disabled'>
+                <div className='btn-container disabled width-arrow'>
                   <FaAngleDoubleRight />
                 </div>
               </>
@@ -89,7 +89,7 @@ const ThreadButtons = () => {
                   }
                   className='color'
                 >
-                  <div className='btn-container'>
+                  <div className='btn-container width-arrow'>
                     <FaAngleRight />
                   </div>
                 </Link>
@@ -101,7 +101,7 @@ const ThreadButtons = () => {
                   }
                   className='color'
                 >
-                  <div className='btn-container'>
+                  <div className='btn-container width-arrow'>
                     <FaAngleDoubleRight />
                   </div>
                 </Link>

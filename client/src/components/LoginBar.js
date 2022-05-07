@@ -39,9 +39,13 @@ const LoginBar = () => {
           ) : location.pathname === '/register' ? (
             ''
           ) : (
-            <Link to={'/login'}>
-              <span className='blue'>Log in or Register</span>
-            </Link>
+            <span>
+              {
+                <Link to={'/login'} className='blue'>
+                  Log in or Register
+                </Link>
+              }
+            </span>
           )}
         </div>
       ) : (
