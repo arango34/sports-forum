@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom';
 import { BsSquareFill } from 'react-icons/bs';
-import { useAppContext } from '../context/appContext';
 
 import './ForumRow.css';
 
 const ForumRow = ({ className, createdAt, sport, _doc }) => {
-  const { setTitle } = useAppContext();
   const pages = Math.ceil(parseInt(_doc.posts) / 10);
   return (
     <article
@@ -17,22 +15,18 @@ const ForumRow = ({ className, createdAt, sport, _doc }) => {
         <BsSquareFill className='square' />
         <div className='title'>
           <div className='forum-title-container'>
-            <Link
-              to={`/thread/${sport}/${_doc._id}/${_doc.posts}/1`}
-              className=''
-              onClick={() => setTitle(_doc.title)}
-            >
-              <h4 className='h4-forum'>
+            <h4 className='h4-forum'>
+              <Link
+                to={`/thread/${sport}/${_doc._id}/${_doc.posts}/1`}
+                className='row-link'
+              >
                 {_doc.title}
-                <span className='arrow'>{'>>'}</span>
-                <Link
-                  to={`/thread/${sport}/${_doc._id}/${_doc.posts}/${pages}`}
-                  onClick={() => setTitle(_doc.title)}
-                >
-                  <span className='page'>page {pages}</span>
-                </Link>
-              </h4>
-            </Link>
+              </Link>
+              <span className='arrow'>{'>>'}</span>
+              <Link to={`/thread/${sport}/${_doc._id}/${_doc.posts}/${pages}`}>
+                <span className='page'>page {pages}</span>
+              </Link>
+            </h4>
           </div>
           <p className='forum-p'>
             {createdAt} - {_doc.createdBy}

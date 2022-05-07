@@ -11,12 +11,12 @@ import './ThreadButtons.css';
 import Btn from './Btn';
 
 const ThreadButtons = () => {
-  const { btns } = useAppContext();
+  const { btns, setShowLinksFalse } = useAppContext();
 
   const { lastPage } = btns;
   const { page, id, sport, postss, threadss } = useParams();
   return (
-    <div>
+    <div onClick={setShowLinksFalse}>
       {!btns || btns.length === 0 ? (
         ''
       ) : (

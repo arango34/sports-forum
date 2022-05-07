@@ -9,7 +9,6 @@ import {
   HIDE_SPINNER,
   SET_THREADS,
   SET_POSTS,
-  SET_TITLE,
   SET_BTNS,
   SET_ALERT,
   SET_ALERT_TEXT,
@@ -30,7 +29,6 @@ const initialState = {
   isLoading: true,
   threads: [],
   posts: [],
-  title: '',
   btns: [],
   alertText: '',
   alert: false,
@@ -243,10 +241,6 @@ const AppProvider = ({ children }) => {
     [authFetch]
   );
 
-  const setTitle = (title) => {
-    dispatch({ type: SET_TITLE, payload: { title } });
-  };
-
   const deleteUser = async (id) => {
     try {
       await axios.delete(`/api/auth/user/${id}`);
@@ -280,7 +274,6 @@ const AppProvider = ({ children }) => {
         getThreads,
         getPosts,
         postReply,
-        setTitle,
         setBtns,
         getThreadCounts,
         setLogbar,

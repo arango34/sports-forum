@@ -1,8 +1,12 @@
+.reply-form {
+  margin-bottom: 2rem;
+}
+
 .reply-form-container {
   background-color: rgb(243, 243, 243);
   padding: 1rem 0;
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 10rem; */
 }
 
 .reply-underline {

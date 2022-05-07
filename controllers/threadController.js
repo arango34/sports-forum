@@ -39,4 +39,19 @@ const postThread = async (req, res, next) => {
   }
 };
 
-export { getThreads, postThread, updateThread };
+const getThreadTitle = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const thread = await Thread.findById(id);
+
+    const title = thread.title;
+
+    return res.status(200).json({ title });
+  } catch (error) {
+    const err = new Error('No Title Found');
+    err.code = 400;
+    next(err);
+  }
+};
+
+export { getThreads, postThread, updateThread, getThreadTitle };

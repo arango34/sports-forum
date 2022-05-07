@@ -63,7 +63,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav onClick={showLinks && setShowLinksFalse}>
+      <nav onClick={showLinks ? setShowLinksFalse : undefined}>
         <div className='nav-center'>
           <Link to='/' onClick={setShowLinksFalse}>
             <h1 className='nav-h2'>SPORTS</h1>

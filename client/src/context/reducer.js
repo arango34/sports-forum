@@ -6,7 +6,6 @@ import {
   HIDE_SPINNER,
   SET_THREADS,
   SET_POSTS,
-  SET_TITLE,
   SET_BTNS,
   SET_FORUMS,
   SET_EDIT_ID,
@@ -46,10 +45,6 @@ const reducer = (state, action) => {
 
   if (action.type === SET_POSTS) {
     return { ...state, posts: action.payload.data };
-  }
-
-  if (action.type === SET_TITLE) {
-    return { ...state, title: action.payload.title };
   }
 
   if (action.type === SET_BTNS) {

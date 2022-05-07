@@ -81,6 +81,7 @@ const Forum = () => {
         </div>
       )}
       <ThreadButtons />
+      <div className='padding' onClick={setShowLinksFalse}></div>
     </section>
   );
 };

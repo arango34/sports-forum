@@ -4,6 +4,10 @@
   margin-bottom: 3rem;
 }
 
+.thread-section {
+  padding-bottom: 2rem;
+}
+
 .replies-container {
   height: 20rem;
   width: 2rem;
@@ -23,4 +27,8 @@
 
 .bottom-link {
   margin: 0 auto;
+}
+
+.reply-for-container {
+  margin-bottom: 40rem;
 }

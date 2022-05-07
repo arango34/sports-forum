@@ -21,8 +21,13 @@ h2 {
   text-decoration: none;
 }
 
+.height {
+  height: 0.5rem;
+}
+
 section {
   max-width: 60rem;
+  height: 100vh;
   margin: 0 auto;
   padding: 0 0.5rem;
 }

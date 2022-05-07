@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 0.5rem; */
   margin-top: -1rem;
   margin-bottom: 1rem;
 }
@@ -30,10 +29,13 @@
 }
 
 .forum-h2 {
-  /* text-align: center; */
   letter-spacing: 0.15rem;
 }
 
 .marginB {
   margin-bottom: 4rem;
+}
+
+.padding {
+  height: 0.02px;
 }

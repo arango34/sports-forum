@@ -35,6 +35,7 @@ const ReplyForm = ({
           </button>
         </div>
       </div>
+      <div className='height'></div>
     </form>
   );
 };

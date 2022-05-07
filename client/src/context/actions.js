@@ -5,7 +5,6 @@ export const SHOW_SPINNER = 'SHOW_SPINNER';
 export const HIDE_SPINNER = 'HIDE_SPINNER';
 export const SET_THREADS = 'SET_THREADS';
 export const SET_POSTS = 'SET_POSTS';
-export const SET_TITLE = 'SET_TITLE';
 export const SET_BTNS = 'SET_BTNS';
 export const SET_FORUMS = 'SET_FORUMS';
 export const SET_EDIT_ID = 'SET_EDIT_ID';

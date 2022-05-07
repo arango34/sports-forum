@@ -12,18 +12,12 @@ import './Thread.css';
 const Thread = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isEditing, setIsEditing] = useState(false);
+  const [title, setTitle] = useState('');
   const [editId, setEditId] = useState('');
   const [isEdited, setIsEdited] = useState(false);
   const [red, setRed] = useState(false);
-  const {
-    user,
-    posts,
-    getPosts,
-    postReply,
-    title,
-    logoutUser,
-    setShowLinksFalse,
-  } = useAppContext();
+  const { user, posts, getPosts, postReply, logoutUser, setShowLinksFalse } =
+    useAppContext();
   let { id, page, sport, postss } = useParams();
   const navigate = useNavigate();
   const postsContainer = useRef();
@@ -91,25 +85,30 @@ const Thread = () => {
     }
   };
 
+  const getTitle = async (threadId) => {
+    try {
+      const { data } = await axios.get(`/api/threads/title/${threadId}`);
+      setTitle(data.title);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     setIsLoading(true);
 
     if (!user) {
       logoutUser();
     }
-
-    try {
-      getPosts(id, page, postss);
-      const timeout = setTimeout(() => {
-        setIsLoading(false);
-      }, 2000);
-      return () => {
-        clearTimeout(timeout);
-      };
-    } catch (error) {
-      console.log(error);
+    getTitle(id);
+    getPosts(id, page, postss);
+    const timeout = setTimeout(() => {
       setIsLoading(false);
-    }
+    }, 2000);
+    return () => {
+      clearTimeout(timeout);
+    };
+
     // eslint-disable-next-line
   }, [getPosts, id, page, postss, isEdited, user]);
 
@@ -166,11 +165,14 @@ const Thread = () => {
           setRed={setRed}
         />
       ) : (
-        <div className='forum-btn-container thread-btn-container'>
-          <Link to='/login' className='btn btn-topic'>
-            Reply To Thread
-          </Link>
-        </div>
+        <>
+          <div className='forum-btn-container thread-btn-container'>
+            <Link to='/login' className='btn btn-topic'>
+              Reply To Thread
+            </Link>
+          </div>
+          <div className='padding' onClick={setShowLinksFalse}></div>
+        </>
       )}
     </section>
   );
