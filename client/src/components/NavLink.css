@@ -1,7 +1,8 @@
 .nav-link {
-  background-color: rgb(241, 245, 247);
+  background-color: white;
   color: blue;
-  border-left: 1px solid rgb(219, 218, 218);
+  border-left: 2px solid rgb(219, 218, 218);
+  border-right: 1px solid rgba(219, 218, 218, 0.438);
   height: 4rem;
   display: flex;
   align-items: center;
@@ -15,12 +16,12 @@
 
 .navLink-title-container {
   background-color: rgb(241, 245, 247);
-  border-left: 1px solid rgb(219, 218, 218);
+  background-color: white;
+  border-left: 2px solid rgb(219, 218, 218);
+  border-right: 1px solid rgb(219, 218, 218, 0.438);
   color: rgb(177, 175, 175);
   height: 3rem;
-  padding-top: 0.75rem;
-  padding-left: 0.5rem;
-  padding-right: 2rem;
+  padding: 0.75rem 2rem 0 0.5rem;
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: 0.15rem;
@@ -43,9 +44,10 @@
 }
 
 .radius-bottom {
-  border-bottom: 1px solid rgb(219, 218, 218);
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-bottom: 2px solid rgb(219, 218, 218);
+  border-bottom-left-radius: 0.25rem;
+  height: 7rem;
+  padding-bottom: 2rem;
 }
 
 .user-circle {

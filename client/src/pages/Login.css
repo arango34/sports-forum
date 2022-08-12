@@ -23,15 +23,15 @@
 .login-p {
   color: blue;
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   margin: 0 auto;
   width: 100%;
   max-width: 50rem;
   padding-bottom: 1rem;
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(233, 233, 233);
 }
 
-.login-p:hover {
+.login-span:hover {
   cursor: pointer;
 }
 

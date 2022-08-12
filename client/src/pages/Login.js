@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import LoginForm from '../components/LoginForm';
 import RegisterForm from '../components/RegisterForm';
+import UserContainer from '../components/UserContainer';
 import Loading from '../components/Loading';
 import Spinner from '../components/Spinner';
 
@@ -44,6 +45,9 @@ const Login = () => {
           {isMember ? 'Not A Member?' : 'Log In'}
         </span>
       </div>
+      {isMember && (
+        <UserContainer isMember={isMember} setIsMember={setIsMember} />
+      )}
     </section>
   );
 };

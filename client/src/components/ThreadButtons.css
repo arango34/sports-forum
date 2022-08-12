@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-between;
   padding: 0 0.25rem;
-  max-width: 31rem;
+  max-width: 37rem;
   margin: 0 auto 2rem auto;
 }
 
 .btn-container {
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(233, 233, 233);
   display: grid;
   align-items: center;
   justify-content: center;
@@ -19,23 +19,23 @@
 }
 
 .width-arrow {
-  width: 2rem;
+  width: 3rem;
 }
 
 .width-num-s {
-  padding: 0 0.85rem;
+  padding: 0 1.25rem;
 }
 
 .width-num-m {
-  padding: 0 0.7rem;
+  padding: 0 1.3rem;
 }
 
 .width-num-l {
-  padding: 0 0.45rem;
+  padding: 0 0.95rem;
 }
 
 .width-num-xl {
-  padding: 0 0.25rem;
+  padding: 0 0.75rem;
 }
 
 .btn-container:hover {
@@ -49,13 +49,13 @@
 
 .btn-container-right {
   display: flex;
-  width: 4.25rem;
+  width: 6.5rem;
   justify-content: space-between;
 }
 
 .btn-container-left {
   display: flex;
-  width: 4.25rem;
+  width: 6.5rem;
   justify-content: space-between;
 }
 

@@ -8,6 +8,8 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(234, 236, 238);
+  background-color: rgb(252, 252, 252);
 }
 
 h2 {
@@ -27,9 +29,10 @@ h2 {
 
 section {
   max-width: 60rem;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0 auto;
-  padding: 0 0.5rem;
+  padding: 2rem 0.5rem;
+  background-color: white;
 }
 
 textarea {

@@ -33,21 +33,19 @@ const LoginBar = () => {
           <Spinner className='spinner-load' />
         </div>
       ) : !user || !currentUser ? (
-        <div className='login'>
-          {location.pathname === '/login' ? (
-            ''
-          ) : location.pathname === '/register' ? (
-            ''
-          ) : (
-            <span>
-              {
-                <Link to={'/login'} className='blue'>
-                  Log in or Register
-                </Link>
-              }
-            </span>
+        <>
+          {location.pathname !== '/login' && location.pathname !== '/register' && (
+            <div className='login'>
+              <span>
+                {
+                  <Link to={'/login'} className='blue'>
+                    Log in or Register
+                  </Link>
+                }
+              </span>
+            </div>
           )}
-        </div>
+        </>
       ) : (
         <div className='login login-user'>
           <p>

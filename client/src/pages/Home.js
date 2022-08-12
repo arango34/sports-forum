@@ -41,7 +41,11 @@ const Home = () => {
     <section className='forum-section' onClick={setShowLinksFalse}>
       {forums.map((item, i) => {
         return (
-          <HomeRow key={i} className={i % 2 === 0 ? 'grey' : null} {...item} />
+          <HomeRow
+            key={i}
+            className={i % 2 === 0 ? 'home-grey' : null}
+            {...item}
+          />
         );
       })}
     </section>

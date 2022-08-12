@@ -1,0 +1,32 @@
+.users-container-p {
+  text-align: center;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.users-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container-user {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.bracket {
+  font-weight: bold;
+  color: rgb(160, 158, 158);
+}
+
+.login-key {
+  color: grey;
+  font-size: 0.95rem;
+}
+
+.login-val {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: blue;
+}
