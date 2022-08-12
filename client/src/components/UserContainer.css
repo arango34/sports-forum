@@ -12,21 +12,24 @@
 
 .container-user {
   display: flex;
+  align-items: center;
   gap: 0.5rem;
 }
 
 .bracket {
   font-weight: bold;
+  font-size: 1.1rem;
   color: rgb(160, 158, 158);
 }
 
 .login-key {
-  color: grey;
-  font-size: 0.95rem;
+  color: rgb(58, 58, 58);
+  font-size: 0.85rem;
+  font-weight: bold;
 }
 
 .login-val {
   font-weight: bold;
   font-size: 0.95rem;
-  color: blue;
+  color: rgb(71, 71, 255);
 }
